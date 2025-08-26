@@ -1,92 +1,89 @@
 body {
-  margin: 0;
-  background-color: rgb(185, 220, 246);
-  font-family: cursive;
+    margin: 0;
+    background-color: #947cf3;
+    font-family: cursive;
 }
 #openBtn{
-    background-color:#6702ff;
-    font-weight: 500;
-    font-size: medium;
-    border:white;
-    margin-left: 1420px;
-    margin-top: 10px;
-    border-radius: 10px;
-    height: 30px;
-    width: auto;
-    color: white;
+  background-color: rgb(54, 21, 186);
+  border:none;
+  border-radius: 4px;
+  color: white;;
+  margin-top: 20px;
+  margin-left: 20px;
+  width:60px
 }
 .popup {
-  width: 500px;
-  height: 300px;
-  background-color: rgb(99, 183, 252);
-  border-radius: 6px;
-  position: fixed;
-  padding: 8px;
-  box-shadow: 0px 5px 4px 2px rgb(110, 6, 245);
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0); /* hidden at center */
-  transform-origin: top right;               /* 👈 animates from button corner */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-
-  opacity: 0;
-  pointer-events: none;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(54, 21, 186);
+    border-radius: 16px;
+    padding: 8px;
+    position: fixed;
+    box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+    top: 0;
+    left: 0;
+    /* display: none; */
 }
 
-.popup.open {
-  transform: translate(-50%, -50%) scale(1); /* visible at center */
-  opacity: 1;
-  pointer-events: auto;
+.popup-open .popup {
+    /* display: block; */
+    transform: scale(1);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-.class-icon{
-    font-size: 42px;
+.close-icon {
+    font-size: 48px;
     font-weight: 700;
-    position:absolute;
-    right:14px;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
     font-family: serif;
 }
-.class-icon:hover{
-    font-weight:1000;
-    font-size: 48px;
-    cursor: pointer;
-}
-#inputs {
+#inputs{
   display: flex;
-  flex-direction: column; 
-  align-items: center;     
-  gap: 12px;               
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
-
-#inputs input {
-  width: 250px;
-  padding: 5px;
-  border-color: inherit;
-  border-radius: 6px;
+#inputs input{
+  width: 350px;
+  height: 20px;
+  border-radius: 10px;
 }
-
+#inputs input::placeholder{
+color: black;
+opacity: 1;
+padding-left: 20px;
+}
+#submit{
+  align-items: ;
+}
 #submit {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  background: #6702ff;
-  color: white;
-  cursor: pointer;
-  margin: 20px auto;
-  display: block;
+  width: 250px;         /* Set the width of the button */
+  height: 40px;         /* Set the height of the button */
+  padding: 10px;        /* Add padding for better appearance */
+  border: none;         /* Remove default border */
+  border-radius: 6px;   /* Rounded corners */
+  background: #6702ff;  /* Background color */
+  color: white;         /* Text color */
+  cursor: pointer;      /* Change cursor on hover */
+  margin: 20px auto;    /* Center the button horizontally */
+  display: block;       /* Ensure it behaves as a block element */
 }
-
 #submit:hover {
   background: #0539f8;
 }
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-
-@media (max-width: 675px) {
-  #openBtn {
-    margin-left: 378px;
-  }
-  .popup{
-    max-width: 400px;
-  }
+.popup-open .overlay {
+    display: block;
 }

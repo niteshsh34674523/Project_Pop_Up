@@ -2,23 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popup Example</title>
+    <title>Modal Popup</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <button id="openBtn">Open popup</button>
-
-    <div class="popup" id="popup">
-      <div class="class-icon">&times</div>
-      <h2>Please enter details</h2> <div id="inputs">
-      <input type="text" name="Name" placeholder="Enter name" id="">
-      <input type="text" name="email" placeholder="Enter email" id="">
-      <input type="text" name="Mobile no" placeholder="Enter Mobile Number" id="">
+    <button id="openBtn">Open Popup</button>
+    <div class="popup-container">
+      <div class="overlay"></div>
+      <div class="popup">
+        <div class="close-icon">&times;</div>
+        <h2>Don't Miss Out</h2>
+        <div id="inputs">
+            <input type="text" name="Name" placeholder="Enter name" id="">
+            <input type="text" name="email" placeholder="Enter email" id="">
+            <input type="text" name="Mobile no" placeholder="Enter Mobile Number" id="">
+        </div>
+        <p> Read terms and conditions carefully before submitting.</p>
+        <button id="submit">Submit</button>
       </div>
-      <p> Read terms and conditions carefully before submitting.</p>
-      <button id="submit">Submit</button>
     </div>
   </body>
 </html>
